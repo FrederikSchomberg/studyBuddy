@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #032b12;
+
+}
+
+.header{
+    color: rgb(105, 196, 97);
+    background-color: #032b12;
+    text-align: center;
+    font-size: xx-large;
+    padding: 10px;
+}
+
+
+.nav {
+    background: #032b12;
+    
+    padding: 5px;
+}
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 15px;
+}
+.nav ul li {
+    display: inline;
+    margin-left: 5px;
+}
+.nav ul li a {
+    color:  rgb(105, 196, 97);
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    color:black
+}
+.content {
+    padding: 20px;
+}
+section {
+    background: #00fc60;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+#timer-display {
+    font-size: 2em;
+    margin: 20px 0;
+}
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    margin: 5px;
+}
+input {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+}

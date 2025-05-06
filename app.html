@@ -7,6 +7,15 @@
     <title>Study Buddy</title>
 </head>
 <body class="main-app">
+
+    <script>
+        if (localStorage.getItem("eingeloggt") !== "true") {
+          alert("Bitte logge dich erst ein.");
+          window.location.href = "index.html";
+        }
+      </script>
+      
+
     <div class="header">
         <h1>Study Buddy</h1>
     </div>
@@ -32,11 +41,19 @@
     <div class="content">
         <section id="schedule">
             <h2>📅 Zeitplan</h2>
+            <button id="add-schedule-item">+</button>
+            <ul id="schedule-list">
+                
+            </ul>
         </section>
 
         <section id="goals">
             <h2>🎯 Lernziele</h2>
             <p>To-Do-Liste, Tagesziele oder Semesterziele.</p>
+            <button id="add-goal-item">+</button>
+            <ul id="goal-list">
+
+            </ul>
         </section>
 
         <section id="timer">

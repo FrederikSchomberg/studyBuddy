@@ -128,8 +128,72 @@ button {
     font-size: 1em;
     margin: 5px;
 }
+
+
 input {
     padding: 10px;
     font-size: 1em;
     margin: 5px;
+}
+
+
+#add-schedule-item {
+    font-size: 1.5em;
+    background-color: #00fc60;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    padding: 0;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#add-schedule-item:hover{
+    background-color: #05d35b;
+}
+
+#schedule-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#schedule-list li {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+
+#add-goal-item {
+    font-size: 1.5em;
+    background-color: #00fc60;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    padding: 0;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#add-goal-item:hover{
+    background-color: #05d35b;
+}
+
+#goal-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#goal-list li {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: black;
 }

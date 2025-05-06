@@ -1,4 +1,5 @@
 /*################### Hamburger-Menü ##################*/
+
 const hamMenu = document.querySelector('.ham-menu');
 
 const offscreenMenu = document.querySelector('.offscreen-menu');
@@ -7,6 +8,39 @@ hamMenu.addEventListener('click', () => {
     hamMenu.classList.toggle('active');
     offscreenMenu.classList.toggle('active');
 })
+
+
+
+/*#################### Zeitplan ##########################*/
+
+const addScheduleItemButton = document.getElementById("add-schedule-item");
+const scheduleList = document.getElementById("schedule-list");
+
+addScheduleItemButton.addEventListener("click", () => {
+    const listeneintrag = prompt("Was möchtest du zum Zeitplan hinzufügen?");
+    if (listeneintrag) {
+        const sli = document.createElement("li");
+        sli.textContent = listeneintrag;
+        scheduleList.appendChild(sli);
+    }
+});
+
+
+
+/*#################### Ziele ##########################*/
+
+const addGoalButton = document.getElementById("add-goal-item");
+const goalList = document.getElementById("goal-list");
+
+addGoalButton.addEventListener("click", () => {
+    const zieleintrag = prompt("Welches Ziel möchtest du hinzufügen?");
+    if (zieleintrag) {
+        const gli = document.createElement("li");
+        gli.textContent = zieleintrag;
+        goalList.appendChild(gli);
+    }
+});
+
 
 
 /*#################### Timer ##########################*/
@@ -23,9 +57,9 @@ function updateAnzeige() {
         `${minuten.toString().padStart(2, '0')}:${sekunden.toString().padStart(2, '0')}`;
 }
 
-// Startet den Timer
+// Timer starten
 function startTimer() {
-    stopTimer(); //Timer stoppen
+    stopTimer(); 
     timer = setInterval(() => {
         if (zeit > 0) {
             zeit--;
@@ -39,16 +73,16 @@ function startTimer() {
     }, 1000);
 }
 
-// Stoppt den Timer
+// Timer stoppen
 function stopTimer() {
     clearInterval(timer);
 }
 
-// Setzt den Timer zurück auf die ursprüngliche Zeit
+// Timer zurück auf die ursprüngliche Zeit setzen
 function resetTimer() {
-    stopTimer(); // Timer stoppen
-    zeit = ursprünglicheZeit; // Zurücksetzen auf die ursprüngliche Zeit
-    updateAnzeige(); // Anzeige aktualisieren
+    stopTimer(); 
+    zeit = ursprünglicheZeit; 
+    updateAnzeige(); 
 }
 
 // Erlaubt das Setzen der Pomodoro-Zeit
@@ -69,7 +103,9 @@ updateAnzeige();
 // Logout-Funktion
 function logout() {
     alert("Du wurdest ausgeloggt.");
-    window.location.href = "index.html"; // zurück zur Login-Seite
+    window.location.href = "index.html"; 
 }
+
+
 
 

@@ -1,3 +1,16 @@
+/*################### Hamburger-Menü ##################*/
+const hamMenu = document.querySelector('.ham-menu');
+
+const offscreenMenu = document.querySelector('.offscreen-menu');
+
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offscreenMenu.classList.toggle('active');
+})
+
+
+/*#################### Timer ##########################*/
+
 let timer;
 let zeit = 25 * 60; // Startzeit (25 Minuten)
 let ursprünglicheZeit = zeit; // Speichert die ursprüngliche Zeit
@@ -58,3 +71,5 @@ function logout() {
     alert("Du wurdest ausgeloggt.");
     window.location.href = "index.html"; // zurück zur Login-Seite
 }
+
+

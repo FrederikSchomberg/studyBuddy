@@ -197,3 +197,16 @@ input {
     margin-bottom: 10px;
     color: black;
 }
+
+#add-group {
+    font-size: 1.5em;
+    background-color: #00fc60;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    padding: 0;
+    margin-bottom: 10px;
+    color: black;
+}

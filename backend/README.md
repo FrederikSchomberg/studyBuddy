@@ -2,7 +2,7 @@
 
 ## Setup
 
-(Optional) Erstelle und aktiviere eine virtuelle Umgebung:
+Erstelle und aktiviere eine virtuelle Umgebung:
 
 ```bash
 python -m venv venv  

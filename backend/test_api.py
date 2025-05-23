@@ -45,3 +45,21 @@ def test_create_study_group():
     data = response.json()
     assert data["id"] == 1
     assert data["name"] == "Math Study Group"
+
+def test_get_study_groups_after_post():
+    # Create a new group
+    payload = {
+        "name": "Webtech2 Group",
+        "description": "Project",
+        "creator_id": 2,
+        "tags": ["webtech", "study", "project"]
+    }
+    client.post("/study_groups/", json=payload)
+
+    # Now get study groups
+    response = client.get("/study_groups/")
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) >= 1
+    assert data[1]["name"] == "Webtech2 Group"
+

@@ -16,22 +16,20 @@ mock_study_groups: List[StudyGroup] = []
 def get_study_group_id() -> int:
     return len(mock_study_groups) + 1
 
-# New Root Endpoint: Welcome message
+# Root Endpoint: welcome message
 @app.get("/")
 async def root():
-    """Welcome message for StudyBuddy API."""
     return {"message": "Welcome to StudyBuddy"}
 
 # Use Case 1: GET all users
 @app.get("/users/", response_model=List[User])
 async def get_users():
-    """Retrieve all users."""
     return mock_users
 
 # Use Case 2: GET user by ID
 @app.get("/users/{user_id}", response_model=User)
 async def get_user(user_id: int):
-    """Retrieve a user by ID."""
+    
     if user_id <= 0:
         raise HTTPException(status_code=400, detail="Invalid user ID")
     for user in mock_users:
@@ -42,7 +40,6 @@ async def get_user(user_id: int):
 # Use Case 3: POST create study group
 @app.post("/study_groups/", response_model=StudyGroup, status_code=201)
 async def create_study_group(group: StudyGroupCreate):
-    """Create a new study group."""
     new_id = get_study_group_id()
     new_group = StudyGroup(
         id=new_id,
@@ -51,3 +48,9 @@ async def create_study_group(group: StudyGroupCreate):
     )
     mock_study_groups.append(new_group)
     return new_group
+
+# Use Case 4: GET all study groups
+@app.get("/study_groups/", response_model=List[StudyGroup])
+async def get_all_study_groups():
+    return mock_study_groups
+

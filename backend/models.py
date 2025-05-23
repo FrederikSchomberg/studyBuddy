@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 from datetime import datetime
 
 class User(BaseModel):
@@ -10,7 +10,7 @@ class User(BaseModel):
 
 class StudyGroupCreate(BaseModel):
     name: str
-    description: str
+    description: Optional[str]
     creator_id: int
     tags: List[str]
 

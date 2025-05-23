@@ -47,7 +47,7 @@ async def create_study_group(group: StudyGroupCreate):
     new_group = StudyGroup(
         id=new_id,
         created_at=datetime.now(UTC),
-        **group.dict()
+        **group.model_dump()
     )
     mock_study_groups.append(new_group)
     return new_group

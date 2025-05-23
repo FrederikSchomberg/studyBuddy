@@ -1,13 +1,33 @@
+# mock_data.py (bereinigt)
+
 users = [
-    {"id": 1, "name": "Sean Combs"},
-    {"id": 2, "name": "John"},
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john@example.com",
+        "created_at": "2025-05-16T19:55:00Z"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "created_at": "2025-05-16T19:55:00Z"
+    },
+    {
+        "id": 3,
+        "name": "Alice Johnson",
+        "email": "alice@example.com",
+        "created_at": "2025-05-16T19:55:00Z"
+    }
 ]
 
 groups = [
-    {"id": 1, "name": "Mathe2 Gruppe", "members": 2},
-    {"id": 2, "name": "Python Crew", "members": 1},
-]
-
-meetings = [
-    {"id": 1, "title": "Lineare Algebra", "group_id": 1, "time": "2025-05-20 10:00"},
+    {
+        "id": 1,
+        "name": "Math Study Group",
+        "description": "Group for math enthusiasts",
+        "creator_id": 1,
+        "tags": ["math", "study"],
+        "created_at": "2025-05-16T19:55:00Z"
+    }
 ]
